@@ -9,11 +9,11 @@
     </style>
     <title>{{ title }} | Eleventy Edge AQI</title>
   </head>
-  <body>
+  <body class="stack">
     {# <header>
       <a href="#main" class="visually-hidden skip-link">Skip to main content</a>
     </header> #}
-    <main id="main">{{ content | safe }}</main>
+    <main id="main" class="stack">{{ content | safe }}</main>
     <footer>
       All AQI Data provided by the
       <a href="https://waqi.info/"
