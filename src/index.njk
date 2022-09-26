@@ -4,9 +4,6 @@ title: Your AQI Data
 
 {% edge "njk" %}
 <h1 data-aqi-color="{{ localAqi.data.aqi | getAqiColor }}">AQI: {{ localAqi.data.aqi }}</h1>
-<code>
-  <pre>{{localAqi | json}}</pre>
-</code>
 <dl class="aqi-breakout-sections">
   {% if localAqi.data.iaqi.pm25 %}
   <div>
