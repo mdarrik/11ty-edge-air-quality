@@ -1,0 +1,32 @@
+{
+  "name": "11ty-edge-air-quality",
+  "version": "1.0.0",
+  "description": "Gets your local air quality using 11ty-edge functions (US only atm)",
+  "main": "eleventy.config.cjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "dev": "eleventy --quiet --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdarrik/11ty-edge-air-quality.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdarrik/11ty-edge-air-quality/issues"
+  },
+  "homepage": "https://github.com/mdarrik/11ty-edge-air-quality#readme",
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0-canary.16",
+    "modern-css-reset": "^1.4.0",
+    "open-props": "^1.4.16",
+    "postcss": "^8.4.16",
+    "postcss-import": "^15.0.0",
+    "postcss-jit-props": "^1.0.7"
+  }
+}

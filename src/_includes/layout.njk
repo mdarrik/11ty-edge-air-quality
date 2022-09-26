@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      {{css | safe}}
+    </style>
+    <title>{{ title }} | Eleventy Edge AQI</title>
+  </head>
+  <body>
+    <header>
+      <a href="#main" class="visually-hidden skip-link">Skip to main content</a>
+    </header>
+    <main id="main">{{ content | safe }}</main>
+    <footer>
+      All AQI Data provided by the
+      <a href="https://waqi.info/"
+        >World Air Quality Index <abbr>(WAQI)</abbr></a
+      >
+      via the <a href="https://aqicn.org/api/">AQICN API</a>. Note that this
+      data is not validated by the creator of this site (<a
+        href="https://www.darrik.dev"
+        >Darrik Moberg</a
+      >) or the WAQI, so don't use this for anything serious. For that, check
+      with your local government/municipality.
+    </footer>
+  </body>
+</html>

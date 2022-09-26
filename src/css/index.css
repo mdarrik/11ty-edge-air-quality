@@ -1,0 +1,25 @@
+@import "modern-css-reset";
+:root {
+  /** AQI Colors defined https://www.airnow.gov/sites/default/files/2020-05/aqi-technical-assistance-document-sept2018.pdf */
+  --aqi-green: rgb(0, 228, 0);
+  --aqi-yellow: rgb(255, 255, 0);
+  --aqi-orange: rgb(255, 126, 0);
+  --aqi-red: rgb(255, 0, 0);
+  --aqi-purple: rgb(143, 63, 151);
+  --aqi-maroon: rgb(126, 0, 34);
+}
+
+[data-aqi-color="green"] {
+  background-color: var(--aqi-green);
+}
+
+.aqi-breakout-sections {
+  display: flex;
+  gap: var(--size-fluid-1);
+}
+
+.aqi-breakout-sections > div {
+  box-shadow: var(--shadow-1);
+  outline: 2px solid var(--teal-4);
+  aspect-ratio: var(--ratio-square);
+}

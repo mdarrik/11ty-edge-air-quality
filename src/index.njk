@@ -1,0 +1,66 @@
+---
+title: Your AQI Data
+---
+
+{% edge "njk" %}
+<h1 data-aqi-color="{{ localAqi.data.aqi | getAqiColor }}">AQI: {{ localAqi.data.aqi }}</h1>
+<code>
+  <pre>{{localAqi | json}}</pre>
+</code>
+<dl class="aqi-breakout-sections">
+  {% if localAqi.data.iaqi.pm25 %}
+  <div>
+  <dt>PM2.5</dt>
+  <dd>{{localAqi.data.iaqi.pm25.v}}</dd>
+  </div>
+  {% endif %}
+  {% if localAqi.data.iaqi.pm10 %}
+  <div>
+    <dt>PM10</dt>
+    <dd>{{localAqi.data.iaqi.pm10.v}}</dd>
+  </div>
+  {% endif %}
+  {% if localAqi.data.iaqi.o3%}
+  <div>
+    <dt>Ozone</dt>
+    <dd>{{localAqi.data.iaqi.o3.v}}</dd>
+  </div>
+  {% endif %}
+  {% if localAqi.data.iaqi.no2%}
+  <div>
+    <dt>NO<sub>2</sub></dt>
+    <dd>{{localAqi.data.iaqi.no2.v}}</dd>
+  </div>
+  {% endif %}
+  {% if localAqi.data.iaqi.so2 %}
+  <div>
+    <dt>SO<sub>2</sub></dt>
+    <dd>{{localAqi.data.iaqi.so2.v}}</dd>
+  </div>
+  {% endif %}
+  {% if localAqi.data.iaqi.co%}
+  <div>
+    <dt>CO</dt>
+    <dd>{{localAqi.data.iaqi.co.v}}</dd>
+  </div>
+  {% endif%}
+
+</dl>
+<!-- <section>
+    <h2>Forecast</h2>
+    <ol>
+
+    </ol>
+</section> -->
+<section data-section="attribution">
+  <h2>Attribution</h2>
+  Data provided by the following sources:
+<ul>
+{% for source in localAqi.data.attributions %}
+    <li>
+      <a href="{{ source.url }}">{{ source.name }}</a>
+    </li>
+{% endfor %}
+  </ul>
+</section>
+{% endedge %}
