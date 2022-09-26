@@ -7,19 +7,19 @@ title: Your AQI Data
 <dl class="aqi-breakout-sections">
   {% if localAqi.data.iaqi.pm25 %}
   <div>
-  <dt>PM2.5</dt>
+  <dt>PM 2.5</dt>
   <dd>{{localAqi.data.iaqi.pm25.v}}</dd>
   </div>
   {% endif %}
   {% if localAqi.data.iaqi.pm10 %}
   <div>
-    <dt>PM10</dt>
+    <dt>PM 10</dt>
     <dd>{{localAqi.data.iaqi.pm10.v}}</dd>
   </div>
   {% endif %}
   {% if localAqi.data.iaqi.o3%}
   <div>
-    <dt>Ozone</dt>
+    <dt>Ozone (O<sub>3</sub>)</dt>
     <dd>{{localAqi.data.iaqi.o3.v}}</dd>
   </div>
   {% endif %}

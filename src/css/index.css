@@ -40,3 +40,7 @@ body {
   text-align: center;
   vertical-align: center;
 }
+
+[data-section="attribution"] {
+  margin-block-start: var(--size-12);
+}
